@@ -30,7 +30,7 @@ class UsersRequest extends FormRequest
             'email'=>'required',
             'role_id'=>'required',
             'is_active'=>'required',
-            'password'=>'required'
+            'password'=>'required' 
 
         ];
     }
