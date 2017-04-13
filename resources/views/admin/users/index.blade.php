@@ -11,6 +11,7 @@
     <thead>
       <tr>
         <th>Id</th>
+        <th>Fotoğraf</th>
         <th>İsim</th>
         <th>E-mail</th>
         <th>Rol</th>
@@ -27,6 +28,7 @@
 
       <tr>
         <td>{{$user->id}}</td>
+        <td><img height="50" src="{{$user->photo ? $user->photo->file : 'Kullanıcı Fotoğrafı Yok'}}"></td>
         <td>{{$user->name}}</td>
         <td>{{$user->email}}</td>
         <td>{{$user->role->name}}</td>
