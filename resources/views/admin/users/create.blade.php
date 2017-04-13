@@ -1,4 +1,4 @@
-@extends('admin.index')
+	@extends('layouts.admin')
 
 
 
@@ -28,7 +28,7 @@
 					<div class="form-group">
 						
 					{!! Form::label('role_id', 'Rol:') !!}
-					{!! Form::select('role_id', [''=>'Seçenekler'] + $roles, null, ['class'=>'form-control']) !!}
+					{!! Form::select('role_id', [''=>'Seçenekler'] +$roles, null, ['class'=>'form-control']) !!}
 					
 					</div>
 
@@ -41,9 +41,9 @@
 				</div>
 
 						<div class="form-group">
-							
-						{!! Form::label('file', 'Title:') !!}
-						{!! Form::file('file', null, ['class'=>'form-control']) !!}
+								
+						{!! Form::label('photo_id', 'Fotoğraf:') !!}
+						{!! Form::file('photo_id', null, ['class'=>'form-control']) !!}
 						
 						</div>
 

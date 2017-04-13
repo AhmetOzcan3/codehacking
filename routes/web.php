@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -27,4 +30,4 @@ Route::get('/admin', function(){
 });
 
 
-Route::resource('admin/users', 'AdminUsersController');
+Route::resource('/admin/users', 'AdminUsersController');
