@@ -50,7 +50,7 @@
 				<div class="form-group">
 
 				{!! Form::label('is_active', 'Durum:') !!}
-				{!! Form::select('is_active', array(1 => 'Çevrimiçi', 0=> 'Çevrimdışı'), null, ['class'=>'form-control']) !!}
+				{!! Form::select('is_active', array(1 => 'Aktif', 0=> 'Aktif Değil'), null, ['class'=>'form-control']) !!}
 				
 				</div>
 
@@ -70,11 +70,22 @@
 	
 		<div class="form-group">
 	
-				{!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
+				{!! Form::submit('Güncelle', ['class'=>'btn btn-primary col-sm-6']) !!}
 		</div>
 		
 
 		{!! Form::close() !!}	
+
+	<h1></h1>
+		
+			{!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id]]) !!}
+		
+		
+			<div class="form-group">
+		
+					{!! Form::submit('Kullanıcıyı Sil', ['class'=>'btn btn-danger col-sm-6']) !!}
+			</div>
+			{!! Form::close() !!}	
 
 		</div>
 
