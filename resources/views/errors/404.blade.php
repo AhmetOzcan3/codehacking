@@ -1,1 +1,11 @@
-<h1>Custom 404 Page</h1>
+@extends('layouts.app')
+
+
+
+@section('content')
+
+
+	<h1 class="text-center">Girilen Sayfa Bulunamadı!</h1>
+
+
+@stop
