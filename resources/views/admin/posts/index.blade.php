@@ -10,13 +10,13 @@
 	    <thead>
 	      <tr>
 	        <th>Id</th>
-	        <th>User</th>
-	        <th>Category</th>
-	        <th>Photo</th>
-	        <th>Title</th>
-	        <th>Body</th>
-	        <th>Created</th>
-	        <th>Updated</th>
+	        <th>Fotoğraf</th>
+	        <th>Kullanıcı</th>
+	        <th>Kategori</th>	        
+	        <th>Başlık</th>
+	        <th>Metin</th>
+	        <th>Oluşturuldu</th>
+	        <th>Güncellendi</th>
 	      </tr>
 	    </thead>
 	    <tbody>
@@ -26,10 +26,10 @@
 	    @foreach($posts as $post)
 
 	      <tr>
-	        <td>{{$post->id}}</td>
-	        <td>{{$post->user_id}}</td>
+	       <td>{{$post->id}}</td>
+	       <td><img height="50" src="{{$post->photo ? $post->photo->file : 'http://placehold.it/400x400'}}"></td>	       
+	        <td>{{$post->user->name}}</td>
 	        <td>{{$post->category_id}}</td>
-	        <td>{{$post->photo_id}}</td>
 	        <td>{{$post->title}}</td>
 	        <td>{{$post->body}}</td>
 	        <td>{{$post->created_at->diffForHumans()}}</td>
